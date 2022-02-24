@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:48:42 by obounri           #+#    #+#             */
-/*   Updated: 2022/02/24 00:38:00 by obounri          ###   ########.fr       */
+/*   Updated: 2022/02/24 21:00:51 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ void    prompt_to_add(PhoneBook *pb)
     for (int i = 0; i < 5; i++)
     {
         std::cout << "Enter " << prompt_mess[i] << " :" << std::endl;
-        std::cin >> input[i];
-        // getline(std::cin,input[i]);
+        std::getline(std::cin,input[i]);
     }
     std::cout << std::endl;
     (*pb).add(input[0], input[1], input[2], input[3], input[4]);

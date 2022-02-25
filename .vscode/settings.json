@@ -60,6 +60,7 @@
         "utility": "cpp",
         "vector": "cpp",
         "iomanip": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "phonebook.hpp": "c"
     }
 }

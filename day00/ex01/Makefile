@@ -2,11 +2,13 @@ NAME = PhoneBook
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 HEADER = PhoneBook.hpp
 
-SRC_FILE = PhoneBook.cpp
+SRC_FILE = main.cpp \
+			PhoneBook.cpp \
+			Contact.cpp
 OBJ_FILE = $(SRC_FILE:.cpp=.o)
 
 all : $(NAME)

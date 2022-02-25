@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:32:51 by obounri           #+#    #+#             */
-/*   Updated: 2022/02/23 16:22:03 by obounri          ###   ########.fr       */
+/*   Updated: 2022/02/26 00:22:53 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "Contact.hpp"
 #include <string>
 #include <iostream>
+#include <iomanip>
 
 class PhoneBook
 {
@@ -24,15 +25,11 @@ private:
     int     index;
     int     added;
 public:
-    PhoneBook() {index = 0; added = 0;}
+    PhoneBook();
     int     get_index();
     int     get_added();
-    Contact get_contact(int i) {
-        return contacts[i];
-    }
+    Contact get_contact(int i);
     void    add(std::string fname, std::string lname, std::string nname, std::string pnumber, std::string secret);
-    void    search();
-    void    exit();
 };
 
 

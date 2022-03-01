@@ -1,17 +1,13 @@
-NAME = war
+NAME = karenFilter
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = HumanA.hpp \
-		HumanB.hpp \
-		Weapon.hpp
+HEADER = Karen.hpp
 
 SRC_FILE =  main.cpp \
-		HumanA.cpp \
-		HumanB.cpp \
-		Weapon.cpp
+		Karen.cpp
 OBJ_FILE = $(SRC_FILE:.cpp=.o)
 
 all : $(NAME)

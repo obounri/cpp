@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   MySed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/26 15:20:44 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/01 17:31:33 by obounri          ###   ########.fr       */
+/*   Created: 2022/03/01 15:30:53 by obounri           #+#    #+#             */
+/*   Updated: 2022/03/01 15:31:35 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#ifndef MYSED_H
+#define MYSED_H
+
+#include <fstream>
 #include <iostream>
+#include <cstring>
 
-class Zombie
-{
-private:
-    std::string name;
-public:
-    Zombie( std::string name );
-    ~Zombie();
-    void announce( void );
-};
+void	sed(std::string a1, std::string s1, std::string s2);
 
-void        randomChump( std::string name );
-Zombie*     newZombie( std::string name );
-
-
+#endif

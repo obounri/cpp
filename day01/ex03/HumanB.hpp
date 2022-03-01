@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 03:36:10 by obounri           #+#    #+#             */
-/*   Updated: 2022/02/28 03:41:34 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:47:55 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ private:
     Weapon*      wp;
 public:
     void    attack();
+    void    setWeapon(Weapon& wp);
+    HumanB();
     HumanB( std::string name );
-    ~HumanB();
 };
 
 #endif

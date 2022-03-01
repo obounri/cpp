@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 03:17:03 by obounri           #+#    #+#             */
-/*   Updated: 2022/02/28 03:41:17 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:35:04 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 class HumanA
 {
 private:
-    std::string name;
-    Weapon&      wp;
+    std::string _name;
+    Weapon&      _wp;
 public:
     void    attack();
-    HumanA( std::string name, Weapon wp );
-    ~HumanA();
+    HumanA();
+    HumanA( std::string name, Weapon& wp ): _name(name),_wp(wp){};
 };
 
 #endif

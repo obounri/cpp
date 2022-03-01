@@ -6,11 +6,15 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 15:27:40 by obounri           #+#    #+#             */
-/*   Updated: 2022/02/26 23:29:57 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/01 17:22:26 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie( void ) {
+    return ;
+}
 
 Zombie::~Zombie() {
     std::cout << name << std::endl;

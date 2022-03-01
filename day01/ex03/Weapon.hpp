@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 03:13:12 by obounri           #+#    #+#             */
-/*   Updated: 2022/02/28 03:40:44 by obounri          ###   ########.fr       */
+/*   Updated: 2022/02/28 04:50:40 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,9 @@ private:
 public:
     const std::string& getType() const;
     void         setType( std::string type );
-    // Weapon(/* args */);
+    Weapon();
+    Weapon( std::string type );
     // ~Weapon();
 };
-
-// Weapon::Weapon(/* args */)
-// {
-// }
-
-// Weapon::~Weapon()
-// {
-// }
 
 #endif

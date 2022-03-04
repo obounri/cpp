@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 16:02:40 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/03 21:05:43 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/04 20:43:54 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ public:
 	int toInt(void) const;
 
 	static Fixed &min(Fixed& n1, Fixed& n2);
-	static Fixed &min(const Fixed& n1, const Fixed& n2);
+	static Fixed const &min(const Fixed& n1, const Fixed& n2);
 	static Fixed &max(Fixed& n1, Fixed& n2);
-	static Fixed &max(const Fixed& n1, const Fixed& n2);
+	static Fixed const &max(const Fixed& n1, const Fixed& n2);
 	
 };
 

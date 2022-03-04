@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 16:04:54 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/03 21:05:31 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/04 20:44:49 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,11 +128,10 @@ Fixed&    Fixed::min(Fixed& n1, Fixed& n2) {
     return n2;
 }
 
-Fixed&    Fixed::min(const Fixed& n1, const Fixed& n2) {
-    Fixed p1(n1);
-    Fixed p2(n2);
-
-    return (min(p1, p2));
+const Fixed&    Fixed::min(const Fixed& n1, const Fixed& n2) {
+    if (n1 < n2)
+        return n1;
+    return n2;
 }
 
 Fixed&    Fixed::max(Fixed& n1, Fixed& n2) {
@@ -141,10 +140,8 @@ Fixed&    Fixed::max(Fixed& n1, Fixed& n2) {
     return n2;
 }
 
-Fixed&    Fixed::max(const Fixed& n1, const Fixed& n2) {
-    Fixed p1(n1);
-    Fixed p2(n2);
-
-    return (max(p1, p2));
-
+const Fixed&    Fixed::max(const Fixed& n1, const Fixed& n2) {
+    if (n1 > n2)
+        return n1;
+    return n2;
 }

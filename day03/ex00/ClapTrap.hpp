@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:47:02 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/04 23:26:02 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/05 03:07:51 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,13 @@ public:
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
+
+    void			setName(std::string const &name);
+	std::string		getName(void) const;
+	void			setHitPoints(unsigned int amount);
+	unsigned int	getHitPoints(void) const;
+	void			setEnergyPoints(unsigned int amount);
+	unsigned int	getEnergyPoints(void) const;
+	void			setAttackDamage(unsigned int amount);
+	unsigned int	getAttackDamage(void) const;
 };

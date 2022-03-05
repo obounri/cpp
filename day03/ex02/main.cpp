@@ -6,21 +6,21 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 02:17:12 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/05 20:42:48 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/05 21:06:06 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int     main()
 {
-	ClapTrap	a("CL-V98");
-	ClapTrap	b(a);
+	FragTrap	a("CL-V98");
+	FragTrap	b(a);
 
 	b.setName("CP-D52");
-	a.setAttackDamage(25);
 	a.attack(b.getName());
 	b.takeDamage(a.getAttackDamage());
-	b.beRepaired(b.getEnergyPoints());
+	a.highFivesGuys();
+	b.beRepaired(15);
 	return (0);
 }

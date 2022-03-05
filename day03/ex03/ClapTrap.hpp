@@ -6,19 +6,22 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 20:47:02 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/05 20:38:16 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/05 15:23:34 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 
 class ClapTrap
 {
-private:
+protected:
     std::string name;
-    unsigned int         hp;
-    unsigned int         energy;
-    unsigned int         attack_d;
+    int         hp;
+    int         energy;
+    int         attack_d;
 public:
     ClapTrap();
     ClapTrap( std::string name );
@@ -40,3 +43,5 @@ public:
 	void			setAttackDamage(unsigned int amount);
 	unsigned int	getAttackDamage(void) const;
 };
+
+#endif

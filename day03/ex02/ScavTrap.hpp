@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 02:17:12 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/05 20:42:48 by obounri          ###   ########.fr       */
+/*   Created: 2022/03/05 15:17:42 by obounri           #+#    #+#             */
+/*   Updated: 2022/03/05 21:36:14 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int     main()
-{
-	ClapTrap	a("CL-V98");
-	ClapTrap	b(a);
+class ScavTrap: public ClapTrap {
+public:
+    ScavTrap();
+    ScavTrap( std::string name );
+    ~ScavTrap();
+    ScavTrap(const ScavTrap &ct);
 
-	b.setName("CP-D52");
-	a.setAttackDamage(25);
-	a.attack(b.getName());
-	b.takeDamage(a.getAttackDamage());
-	b.beRepaired(b.getEnergyPoints());
-	return (0);
-}
+	ScavTrap &operator=(const ScavTrap &ct);
+    void    guardGate();
+    void    attack( const std::string& target );
+};
+
+#endif

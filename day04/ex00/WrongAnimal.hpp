@@ -13,11 +13,13 @@ public:
     // WrongAnimal(const WrongAnimal &ct);
 	// WrongAnimal &operator=(const WrongAnimal &animal);
     ~WrongAnimal();
+    // virtual ~WrongAnimal();
 
     // void         setType( std::string type );
     // std::string  getType( void ) const ;
 
     void makeSound() const;
+    // virtual void makeSound() const;
 };
 
 WrongAnimal::WrongAnimal(/* args */)

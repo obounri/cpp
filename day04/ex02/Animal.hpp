@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/06 22:19:33 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/07 17:35:59 by obounri          ###   ########.fr       */
+/*   Created: 2022/03/06 20:29:46 by obounri           #+#    #+#             */
+/*   Updated: 2022/03/07 18:36:14 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-#define CAT_H
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include <string>
 
-class Cat: public Animal
+class Animal
 {
-private:
-    Brain*  brain;
-    void    deepCopy(const Cat &cat);
+protected:
+    std::string type;
 public:
-    Cat();
-    Cat(const Cat &cat);
-    Cat &operator=(const Cat &cat);
-    ~Cat();
+    Animal( void );
+    Animal( std::string _type );
+    Animal(const Animal &ct);
+	Animal &operator=(const Animal &animal);
+    virtual ~Animal();
 
-    void makeSound() const;
+    void         setType( std::string type );
+    std::string  getType( void ) const ;
 
-    void    setBrain( Brain* brain );
-    Brain*  getBrain( void ) const ;
+    virtual void makeSound() const = 0;
 };
 
 #endif

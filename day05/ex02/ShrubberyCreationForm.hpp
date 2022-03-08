@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 14:04:05 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 16:49:14 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 18:39:02 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ class ShrubberyCreationForm: public Form
 private:
     std::string       _target;
 
-    GradeTooHighException   _gth;
-    GradeTooLowException    _gtl;
-
 public:
     ShrubberyCreationForm( std::string name );
     ShrubberyCreationForm(const ShrubberyCreationForm &scForm);
@@ -36,7 +33,7 @@ public:
     std::string getTarget() const ;
     void        setTarget( std::string target );
 
-    void    execute( Bureaucrat const & executor ) const;
+    bool    execute( Bureaucrat const & executor ) const;
 };
 
 #endif

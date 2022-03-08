@@ -35,7 +35,8 @@ void        RobotomyRequestForm::setTarget( std::string target ) {
     this->_target = target;
 }
 
-void    RobotomyRequestForm::execute( Bureaucrat const & executor ) const {
+bool    RobotomyRequestForm::execute( Bureaucrat const & executor ) const {
     std::cout << this->getName() << std::endl;
     (void)executor;
+    return true;
 }

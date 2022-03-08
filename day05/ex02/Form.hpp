@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 12:00:02 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 16:25:40 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 19:10:11 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "Exceptions.hpp"
 #include "Bureaucrat.hpp"
 
+#include <fstream>
 #include <iostream>
 #include <string>
 
@@ -27,8 +28,10 @@ private:
     const int               _requiredGradeSign;
     const int               _requiredGradeExec;
 
-    GradeTooHighException   _gth;
-    GradeTooLowException    _gtl;
+    GradeTooHighException       _gth;
+    GradeTooLowException        _gtl;
+    FormIsNotSigned             _fns;
+    GradeTooLowToExecException  _gtle;
 
 public:
     Form( std::string name, int requiredGradeSign, int requiredGradeExec );
@@ -46,9 +49,9 @@ public:
     void            beSigned( const Bureaucrat &bureaucrat );
     void            signForm( std::string name, std::string form, bool isSigned ) const ;
 
-    // bool            canSign( const Bureaucrat &bureaucrat );
+    bool            canExec( const Bureaucrat &bureaucrat ) const ;
 
-    virtual void    execute( Bureaucrat const & executor ) const = 0;
+    virtual bool    execute( Bureaucrat const & executor ) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &out, const Form &form);

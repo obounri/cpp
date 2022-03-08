@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 10:26:41 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 12:16:27 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 16:57:30 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ public:
 
     void                incrementGrade();
     void                decrementGrade();
+
+    // void                executeForm(Form const & form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

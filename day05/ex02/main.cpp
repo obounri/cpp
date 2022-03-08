@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 10:26:31 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 16:48:30 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 19:10:43 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@
 int main() 
 {
     {
-        ShrubberyCreationForm form1("f1");
-        PresidentialPardonForm form2("f2");
-        RobotomyRequestForm form3("f3");
+        PresidentialPardonForm form1("f1");
     
-        Bureaucrat b1("GoodBureaucrat", 2);
+        Bureaucrat b1("GoodBureaucrat", 20);
+        form1.beSigned(b1);
         form1.execute(b1);
-        form2.execute(b1);
-        form3.execute(b1);
+        
         // Bureaucrat b2("BadBureaucrat", 21);
         // // // Form       form1("RaiseForm", 20, 20);
         // std::cout << std::endl;

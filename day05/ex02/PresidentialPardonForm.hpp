@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:51:24 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 16:51:57 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 18:39:46 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ class PresidentialPardonForm: public Form
 private:
     std::string       _target;
 
-    GradeTooHighException   _gth;
-    GradeTooLowException    _gtl;
-
 public:
     PresidentialPardonForm( std::string name );
     PresidentialPardonForm(const PresidentialPardonForm &ppForm);
@@ -36,7 +33,7 @@ public:
     std::string getTarget() const ;
     void        setTarget( std::string target );
 
-    void    execute( Bureaucrat const & executor ) const;
+    bool    execute( Bureaucrat const & executor ) const;
 };
 
 #endif

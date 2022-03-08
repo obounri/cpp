@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:59:57 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 16:18:29 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 19:11:22 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,25 @@ void     Form::beSigned( const Bureaucrat &bureaucrat ) {
     signForm(bureaucrat.getName(), this->getName(), this->_isSigned);
 }
 
-// bool            canSign( const Bureaucrat &bureaucrat ) {
-    
-// } 
+bool            Form::canExec( const Bureaucrat &bureaucrat ) const {
+    try {
+        if (this->getIsSigned() == false)
+            throw _fns;
+        else if (bureaucrat.getGrade() > this->getRG_Exec())
+            throw _gtle;
+        return true;
+    }
+    catch(const GradeTooLowException& e) {
+        std::cerr << e.what() << '\n';
+    }
+    catch(const FormIsNotSigned& e) {
+        std::cerr << e.what() << '\n';
+    }
+    catch(const GradeTooLowToExecException& e) {
+        std::cerr << e.what() << '\n';
+    }
+    return false;
+}
 
 void    Form::setIsSigned( bool isSigned ) {
     this->_isSigned = isSigned;

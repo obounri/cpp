@@ -35,7 +35,19 @@ void        ShrubberyCreationForm::setTarget( std::string target ) {
     this->_target = target;
 }
 
-void    ShrubberyCreationForm::execute( Bureaucrat const & executor ) const {
-    std::cout << this->getName() << std::endl;
-    (void)executor;
+bool    ShrubberyCreationForm::execute( Bureaucrat const & executor ) const {
+    std::cout << "execution start" << std::endl;
+    if (this->canExec(executor)) {
+        std::ofstream file(this->getTarget() + "_shrubbery");
+        if (file.is_open()) {
+            file << "trees" << std::endl;
+            file.close();
+        }
+        else {
+            std::cout << "Could not create file " << (this->getTarget() + "_shrubbery") << std::endl;
+            return false;
+        }
+        return true;
+    }
+    return false;
 }

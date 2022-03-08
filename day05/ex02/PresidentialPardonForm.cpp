@@ -35,7 +35,10 @@ void        PresidentialPardonForm::setTarget( std::string target ) {
     this->_target = target;
 }
 
-void    PresidentialPardonForm::execute( Bureaucrat const & executor ) const {
-    std::cout << this->getName() << std::endl;
-    (void)executor;
+bool    PresidentialPardonForm::execute( Bureaucrat const & executor ) const {
+    if (this->canExec(executor)) {
+        std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+        return true;
+    }
+    return false;
 }

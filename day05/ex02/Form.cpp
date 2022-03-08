@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:59:57 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 19:11:22 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 22:19:50 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,15 +80,6 @@ std::ostream &operator<<(std::ostream &out, const Form &form) {
     return out;
 }
 
-void     Form::signForm( std::string name, std::string form, bool isSigned ) const  {
-    if (isSigned == true) {
-        std::cout << name << " signed form " << form << std::endl;
-    }
-    else
-        std::cout << name << " couldn't sign form " << form << " because his grade does not meet the required one." << std::endl;
-        
-}
-
 void     Form::beSigned( const Bureaucrat &bureaucrat ) {
     if (this->getIsSigned() == true) {
         std::cout << "Form " << this->getName() << " is already signed." << std::endl;
@@ -102,7 +93,7 @@ void     Form::beSigned( const Bureaucrat &bureaucrat ) {
     catch(const GradeTooLowException& e) {
         std::cerr << e.what() << '\n';
     }
-    signForm(bureaucrat.getName(), this->getName(), this->_isSigned);
+    bureaucrat.signForm(bureaucrat.getName(), this->getName(), this->_isSigned);
 }
 
 bool            Form::canExec( const Bureaucrat &bureaucrat ) const {

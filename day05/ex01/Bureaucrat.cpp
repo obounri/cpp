@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 10:27:04 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 12:16:14 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 22:16:46 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,12 @@ void        Bureaucrat::decrementGrade() {
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat) {
     out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << std::endl;
     return out;
+}
+
+void     Bureaucrat::signForm( std::string name, std::string form, bool isSigned ) const  {
+    if (isSigned == true) {
+        std::cout << name << " signed form " << form << std::endl;
+    }
+    else
+        std::cout << name << " couldn't sign form " << form << " because his grade does not meet the required one." << std::endl;
 }

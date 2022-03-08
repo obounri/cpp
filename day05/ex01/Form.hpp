@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 12:00:02 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/08 16:26:02 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/08 22:16:55 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ public:
     int             getRG_Exec( void ) const ;
 
     void            beSigned( Bureaucrat const & executor );
-    void            signForm( std::string name, std::string form, bool isSigned ) const ;
 };
 
 std::ostream &operator<<(std::ostream &out, const Form &form);

@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Convert.hpp                                        :+:      :+:    :+:   */
+/*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/09 18:29:17 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/10 01:01:38 by obounri          ###   ########.fr       */
+/*   Created: 2022/03/10 00:43:07 by obounri           #+#    #+#             */
+/*   Updated: 2022/03/10 00:43:08 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-#define CONVERT_HPP
+#ifndef C_H
+#define C_H
 
-#include "Exceptions.hpp"
-
+#include "Base.hpp"
 #include <iostream>
-// #include <iomanip>
 #include <string>
 
-class Convert
+class C: public Base
 {
 private:
-	std::string		            _string;
-
-    ImpossibleTypeConversion    _itc;
-    NotDisplayable              _nd;
-
+    
 public:
-	Convert(void);
-	Convert(std::string const &str);
-	Convert(Convert const &rhs);
-	~Convert(void);
+    C( void );
+    ~C();
 
-	Convert		&operator=(Convert const &rhs);
-	operator char(void) const;
-	operator int(void) const;
-	operator float(void) const;
-	operator double(void) const;
 };
 
 #endif

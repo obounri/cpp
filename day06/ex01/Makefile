@@ -1,14 +1,13 @@
-NAME = convert
+NAME = serializer
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = Convert.hpp \
-		Exceptions.hpp
+HEADER = Serializer.hpp
 
 SRC_FILE =  main.cpp \
-		Convert.cpp
+		Serializer.cpp
 
 OBJ_FILE = $(SRC_FILE:.cpp=.o)
 

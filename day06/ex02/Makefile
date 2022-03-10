@@ -1,15 +1,20 @@
-NAME = convert
+NAME = ez
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = Convert.hpp \
-		Exceptions.hpp
+HEADER = Base.hpp \
+		A.hpp \
+		B.hpp \
+		C.hpp
 
 SRC_FILE =  main.cpp \
-		Convert.cpp
-
+		Base.cpp \
+		A.cpp \
+		B.cpp \
+		C.cpp
+	
 OBJ_FILE = $(SRC_FILE:.cpp=.o)
 
 all : $(NAME)

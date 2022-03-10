@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 19:47:15 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/09 20:02:25 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/09 22:30:08 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Convert.hpp"
 #include <iomanip>
+#include <cmath>
 
 int		main(int ac, char **av)
 {
@@ -56,8 +57,11 @@ int		main(int ac, char **av)
 			std::cout << e.what() << std::endl;
 		}
 	}
-	else
+	else if (ac > 2)
 		std::cout << "One conversion at a time ;)" << std::endl;
+	else
+		std::cout << "No argument." << std::endl;
+		
 
 	return (0);
 }

@@ -5,39 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 00:32:02 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/11 18:31:35 by obounri          ###   ########.fr       */
+/*   Created: 2022/03/11 20:11:10 by obounri           #+#    #+#             */
+/*   Updated: 2022/03/11 21:19:05 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
 #include "Integer.hpp"
-#include "iter.hpp"
-#include "templates.hpp"
-
 #include <iostream>
+#include <unistd.h>
 
-int     main()
-{   
-    int *n = new int[4];
-    n[0] = 42;
-    n[1] = 69;
-    n[2] = 420;
-    n[3] = 666;
-    std::string dd[3] = { "hey,", "wssup", "?"};
-    Integer nbr[4];
-    nbr[0] = 42;
-    nbr[1] = 69;
-    nbr[2] = 420;
-    nbr[3] = 666;
+int main()
+{
+    // Array<int> arr(4);
 
-    iter(n, 4, &output);
-    std::cout << std::endl;
-    iter(dd, 3, &output);
-    std::cout << std::endl;
-    iter(nbr, 4, &output);
-    std::cout << std::endl;
-    iter(nbr, 4, &multiply);
-    iter(nbr, 4, &output);
-    std::cout << std::endl;
+    // arr[0] = 42;
+    // arr[1] = 69;
+    // arr[2] = 420;
+    // arr[3] = 666;
+    // try {
+    //     arr[4] = 666;
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+
+    // std::cout << arr;
+
+    Array<Integer> ints(4);
+    
+    // ints[0] = 42;
+    // ints[1] = 69;
+    // ints[2] = 420;
+    // ints[3] = 666;
+    try {
+        ints[4] = 666;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+
+    // std::cout << ints;
     return 0;
-}
+} 

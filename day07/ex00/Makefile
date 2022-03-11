@@ -4,7 +4,8 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = templates.hpp
+HEADER = templates.hpp \
+		Integer.hpp
 
 SRC_FILE =  main.cpp
 	

@@ -1,11 +1,10 @@
-NAME = iter
+NAME = array
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = iter.hpp \
-		Integer.hpp
+HEADER = Array.hpp
 
 SRC_FILE =  main.cpp
 	

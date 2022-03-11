@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 22:45:51 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/11 17:40:23 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/11 18:30:21 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,16 @@ T   max(T arg1, T arg2) {
         return arg2;
     else
         return arg1;
+}
+
+template <typename T>
+void   multiply(T &arg) {
+    arg = arg * T(2);
+}
+
+template <typename T>
+void   output(T &arg) {
+    std::cout << arg << " ";
 }
 
 #endif

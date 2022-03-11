@@ -6,10 +6,11 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 22:53:12 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/11 00:26:57 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/11 17:40:44 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Integer.hpp"
 #include "templates.hpp"
 
 int main( void ) {

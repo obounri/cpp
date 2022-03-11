@@ -5,9 +5,11 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 HEADER = iter.hpp \
-		Integer.hpp
+		Integer.hpp \
+		templates.hpp
 
-SRC_FILE =  main.cpp
+SRC_FILE =  main.cpp \
+		Integer.cpp
 	
 OBJ_FILE = $(SRC_FILE:.cpp=.o)
 

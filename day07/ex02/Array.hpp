@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 19:18:46 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/11 21:21:40 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/11 23:27:41 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ public:
     Array( int n );
     Array(const Array& arr);
     Array&  operator=(const Array& arr);
-    T&      operator[] (int index);
+    T&      operator[] (int index) const ;
     ~Array();
 
     int size() const ;
@@ -58,16 +58,13 @@ Array<T>::Array() {
 template<class T>
 Array<T>::Array( int n ) {
     this->data = new T[n];
-    for (int i = 0; i < n; i++) {
-        this->data[i] = 0;
-    }
     this->len = n;
 }
 
 template<class T>
 Array<T>::~Array() {
-    if (this->data != 0)
-        delete this->data;
+    if (this->len != 0)
+        delete [] this->data;
 }
 
 template<class T>
@@ -77,15 +74,15 @@ int  Array<T>::size() const {
 
 template<class T>
 void Array<T>::deepCopy(const Array& arr) {
+    if (this->len != 0)
+        delete [] this->data;
     this->len = arr.size();
-    if (data != 0)
-        delete this->data;
     if (arr.data != 0)
     {
         this->data = new T[this->len];
-        for (size_t i = 0; i < this->len; i++)
+        for (int i = 0; i < this->len; i++)
         {
-            this[i] = arr[i];
+            this->data[i] = arr[i];
         }
     }
     else
@@ -93,7 +90,9 @@ void Array<T>::deepCopy(const Array& arr) {
 }
 
 template<class T>
-Array<T>::Array(const Array& arr) {
+Array<T>::Array(const Array& arr):
+len(0)
+{
     deepCopy(arr);
 }
 
@@ -104,7 +103,7 @@ Array<T>&  Array<T>::operator=(const Array& arr) {
 }
 
 template<class T>
-T&      Array<T>::operator[] (int index) {
+T&      Array<T>::operator[] (int index) const {
     if (index >= this->size()) {
         throw _ioor;
     }

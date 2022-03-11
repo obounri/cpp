@@ -7,7 +7,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 HEADER = templates.hpp \
 		Integer.hpp
 
-SRC_FILE =  main.cpp
+SRC_FILE =  main.cpp \
+		Integer.cpp
 	
 OBJ_FILE = $(SRC_FILE:.cpp=.o)
 

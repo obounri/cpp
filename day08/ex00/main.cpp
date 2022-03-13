@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:17:04 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/12 21:34:05 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/14 00:00:57 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
         std::vector<int>v(ints, ints+4);
         
         try {
-            int found = easyfind(v, 9876);
+            int found = easyfind(v, 2);
             std::cout << found << std::endl;
         }
         catch(const std::exception& e) {

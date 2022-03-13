@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 20:39:24 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/13 20:46:30 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/13 23:57:31 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,37 @@
 
 #include <stack>
 #include <vector>
+#include <deque>
 #include <algorithm>
 
 template <class T>
-class MutantStack: public std::stack
+class MutantStack: public std::stack<T >
 {
-private:
-    std::vector<T>v;
 public:
-    MutantStack(/* args */);
+    MutantStack();
     ~MutantStack();
+    
+    typedef typename std::deque<T>::iterator iterator;
+
+    iterator begin() {
+        return this->c.begin();
+    }
+    iterator end() {
+        return this->c.end();
+    }
+    
 };
 
-MutantStack::MutantStack(/* args */)
+template <class T>
+MutantStack<T>::MutantStack()
 {
 }
 
-MutantStack::~MutantStack()
+template <class T>
+MutantStack<T>::~MutantStack()
 {
 }
+
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 18:17:12 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/13 20:16:10 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/14 00:15:26 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void    Span::addNumbers( int N[], int len ) {
         std::cerr << e.what() << '\n';
         return ;
     }
-    for (int i = 0; (i < len && this->nbrs.size() <= (std::vector<int>::size_type)this->maxSize); i++) {
+    for (int i = 0; (i < len && this->nbrs.size() < (std::vector<int>::size_type)this->maxSize); i++) {
         this->nbrs.push_back(N[i]);
     }
 }

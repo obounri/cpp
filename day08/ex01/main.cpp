@@ -6,7 +6,7 @@
 /*   By: obounri <obounri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 17:57:15 by obounri           #+#    #+#             */
-/*   Updated: 2022/03/13 20:22:27 by obounri          ###   ########.fr       */
+/*   Updated: 2022/03/14 00:17:03 by obounri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,19 @@ int main()
     catch(const std::exception& e) {
         std::cerr << e.what() << '\n';
     }
+    std::cout << std::endl;
+    try
+    {
+        for (int i = 0; i < (int)sp.size(); i++)
+        {
+            std::cout << sp[i] << std::endl;
+        }
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 
     return 0;
 }
